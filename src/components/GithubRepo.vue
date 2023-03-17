@@ -20,7 +20,7 @@
             <tr v-for="repo in paginatedRepositories" v-bind:key="repo.id">
               <td>{{ repo.id }}</td>
               <td>{{ repo.name }}</td>
-              <td> {{ repo.html_url }}</td>
+              <td> <router-link to=":id"> {{ repo.html_url }} </router-link></td>
               <td> {{ repo.language }}</td>
             </tr>
           </tbody>
@@ -29,7 +29,9 @@
     <div>
       <button @click="prevPage" :disabled="currentPage === 1">Prev</button>
       <button @click="nextPage" :disabled="currentPage === totalPages">Next</button>
+      {{currentPage}}
     </div>
+          <router-view />
   </div>
 </template>
 
@@ -95,5 +97,3 @@ body {
   padding: 20px !important;
 }
 </style>
-
-

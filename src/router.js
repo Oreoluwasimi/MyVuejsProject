@@ -1,13 +1,10 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router';
+import { createWebHistory, createRouter } from "vue-router";
 import GithubRepo from './components/GithubRepo.vue'
 import SingleRepo from './components/SingleRepo.vue'
+import NotFound from './components/NotFound.vue'
 
-
-
-export default new VueRouter({
-  mode: 'history',
-  routes: [
+const routes = [
     {
       path: '/',
       redirect: '/repositories'
@@ -20,8 +17,20 @@ export default new VueRouter({
           path: ':id',
           component: SingleRepo,
           props: true
-        }
+        },
+        {
+            path: '*',
+            component: NotFound,
+          }
       ]
     }
-  ]
-})
+  ];
+  
+  const router = createRouter({
+    history: createWebHistory(),
+    routes,
+  });
+  
+  export default router;
+
+

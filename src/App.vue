@@ -1,15 +1,17 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <GithubRepo username="Oreoluwasimi" />
+  
+  <router-link to="/repositories"> My Repositories </router-link>
+        <router-view />
+   
 </template>
 
 <script>
-import GithubRepo from './components/GithubRepo.vue'
 
 export default {
   name: 'App',
   components: {
-    GithubRepo
+    
   },
 }
 </script>
