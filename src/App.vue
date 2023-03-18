@@ -1,9 +1,5 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  
-  <router-link to="/repositories"> My Repositories </router-link>
-        <router-view />
-   
+        <router-view />   
 </template>
 
 <script>
