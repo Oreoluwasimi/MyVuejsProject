@@ -1,3 +1,6 @@
+
+## Link to the deployed project
+Here is the [link](https://oreoluwasimi-altschool-vuejsproject.netlify.app/) to the deployed project on Netlify
 # my-github-app
 
 ## Project setup
